@@ -119,7 +119,7 @@ staging_events_copy = ("""copy staging_events from {} \
                       """).format(config.get("S3","LOG_DATA"),config.get("IAM_ROLE","ARN"),config.get("S3","LOG_JSONPATH"))
 
 staging_songs_copy = ("""copy staging_songs from 's3://udacity-dend/song_data'
-                        iam_role 'arn:aws:iam::787938247824:role/myRedshiftRole'
+                        iam_role ''
                         region 'us-west-2' format as json 'auto';
                       """) 
 
